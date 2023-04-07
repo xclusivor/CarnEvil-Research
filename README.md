@@ -12,7 +12,7 @@ This section briefly describes the known files from ROMs and the raw hard disk i
 ### Hard disk
 Executable MIPS-IV code:
 * `DIAG.EXE` - Diagnostics code ran prior to GAME.EXE. Performs hardware and CRC-based file integrity checks. 
-* `GAME.EXE` - Main game code. Appears to be a flat binary with code + data ordered respectfully. 
+* `GAME.EXE` - Main game code. Appears to be a flat binary with code + data ordered respectively. 
 
 Textures:
 * `WMS` - Texture files. Presumably named after WMS Industries who developed arcade games at the time. 
