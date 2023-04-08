@@ -36,6 +36,6 @@ Starting at the `0x123`rd byte is the files CRC hash. Likely `uint32` wide. In t
 ## Bypassing the integrity check
 As mentioned above, if you try to change any games assets that are listed in this file, the game will not start. When DIAG.EXE starts it will check the CRC in the table against the CRC of the corresponding file on disk. 
 
-You can circumvent this check by simply recalculating the checksum. If I replace KRIKFACE.WMS with SMILFACE.WMS, I just need to replace SMILFACE.VMSs CRC with KRIKFACE.VMSs as well as replace the contents of the file on disk. 
+You can circumvent this check by simply recalculating the checksum. If I replace KRIKFACE.WMS with SMILFACE.WMS, I just need to replace SMILFACE.WMSs CRC with KRIKFACE.WMSs as well as replace the contents of the file on disk. 
 
 Using this method you can create completely custom assets as long as you calculate CRC and replace it in the table. 
