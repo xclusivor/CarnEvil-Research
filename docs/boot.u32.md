@@ -4,7 +4,7 @@ MIPS-IV executable BootROM
 
 Likely a generic bootloader for Midway's arcade games. 
 
-Can be disassembled with the fallowing command:
+Can be disassembled with the following command:
 
 `mips-linux-gnu-objdump -D -b binary -mmips:5000`
 
