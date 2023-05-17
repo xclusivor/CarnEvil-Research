@@ -58,7 +58,7 @@ def parse_args():
         "--output_dir",
         default="_extracted_raw",
         required=False,
-        help="Direcory to dump files. Will be created if it doesn't exist",
+        help="Directory to dump files to. Will be created if it doesn't exist",
     )
 
     return parser.parse_args()
