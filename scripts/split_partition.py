@@ -27,7 +27,7 @@ def do_partition_split(partition_filepath, output_dir):
 
                 i = 0
                 while (i < 12) and array1[array2[i]] != 0:
-                    filename = filename + array1[array2[i]]
+                    filename += array1[array2[i]]
                     i = i + 1
 
                 filename = str(filename.decode("utf-8"))
@@ -40,7 +40,7 @@ def do_partition_split(partition_filepath, output_dir):
                 except struct.error:
                     return
 
-                if (not filename) and (num2 == 0):
+                if (filename == "") and (num2 == 0):
                     return
 
                 if filename == "":
@@ -50,8 +50,8 @@ def do_partition_split(partition_filepath, output_dir):
                 num3 = struct.unpack("i", partition_file.read(4))[0]
 
                 pos = partition_file.tell()
-                array3 = partition_file.read(num2 * 4)
                 partition_file.seek(70656 + num3 * 4096, 0)
+                array3 = partition_file.read(num2 * 4)
 
                 if not os.path.isdir(output_dir):
                     os.mkdir(output_dir)
@@ -78,7 +78,7 @@ def parse_args():
         "--output_dir",
         default="_extracted_partition",
         required=False,
-        help="Directory to dump files to. Will be created if it doesn't exist",
+        help="Direcory to dump files. Will be created if it doesn't exist",
     )
 
     return parser.parse_args()
